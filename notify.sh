@@ -11,7 +11,7 @@ USER_IP=$(echo $SSH_CLIENT | awk '{ print $1}')
 curl -s "http://ip-api.com/json/${USER_IP}" > $TMPFILE
 
 # Execute webhook
-discord.sh \
+./discord.sh \
     --webhook-url "$WEBHOOK_URL" \
     --username "ShellBot" \
     --avatar "https://i.imgur.com/iXIShwr.png" \
